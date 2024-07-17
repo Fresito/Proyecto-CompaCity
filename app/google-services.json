@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "454061676171",
+    "firebase_url": "https://compacity-674d7-default-rtdb.firebaseio.com",
+    "project_id": "compacity-674d7",
+    "storage_bucket": "compacity-674d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454061676171:android:85ca6d5a205b06750a268e",
+        "android_client_info": {
+          "package_name": "com.example.compacity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6h7QYl3KRpfykmF95v8j_Jzv5LfqRuXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
