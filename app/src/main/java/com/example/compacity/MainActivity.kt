@@ -30,10 +30,9 @@ class MainActivity : AppCompatActivity() {
         val btnRegister = findViewById<Button>(R.id.btn_register)
         // -------------------------------------------------------------------------------------------------
 
-        FirebaseApp.initializeApp(this)
-
+        FirebaseApp.initializeApp(this) // Inicializacion de Firebase
         val database = FirebaseDatabase.getInstance()
-        val reference = database.getReference("users")
+        val reference = database.getReference("users") // Nombre de la tabla
 
         // -------------------------------------------------------------------------------------------------
         btnLogin.setOnClickListener {
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
 
                         when (userType) {
                             1 -> startActivity(Intent(this@MainActivity, Home::class.java))
-                            2 -> startActivity(Intent(this@MainActivity, Register::class.java))
+                            2 -> startActivity(Intent(this@MainActivity, Home::class.java))
                             else -> Toast.makeText(this@MainActivity, "Tipo de usuario desconocido", Toast.LENGTH_SHORT).show()
                         }
 
@@ -74,11 +73,18 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 override fun onCancelled(error: DatabaseError) {
-                    // Maneja errores aquí
+                    // Error en carga de datos
                     println("Error al leer datos: ${error.message}")
                 }
             })
 
+        }
+        // -------------------------------------------------------------------------------------------------
+
+        // -------------------------------------------------------------------------------------------------
+        btnRegister.setOnClickListener {
+            val intent = Intent(this, Register::class.java)
+            startActivity(intent)
         }
         // -------------------------------------------------------------------------------------------------
 
