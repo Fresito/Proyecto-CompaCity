@@ -54,7 +54,8 @@ dependencies {
     // Firebase
 
     // Desing
-
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 
     // Import the Firebase BoM
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
