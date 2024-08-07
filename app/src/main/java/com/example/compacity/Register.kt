@@ -1,6 +1,7 @@
 package com.example.compacity
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -72,6 +73,7 @@ class Register : AppCompatActivity() {
                             .addOnSuccessListener {
                                 // Registro exitoso
                                 Toast.makeText(this@Register, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                                startActivity(Intent(this@Register, MainActivity::class.java))
                             }
                             .addOnFailureListener {
                                 // Error al guardar los datos

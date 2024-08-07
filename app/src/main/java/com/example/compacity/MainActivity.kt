@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     var userFound = false
                     var userType: Int? = null
+                    var userData: User? = null
 
                     // Coincide el correo electrónico y la contraseña
                     for (childSnapshot in snapshot.children) {
@@ -52,6 +53,7 @@ class MainActivity : AppCompatActivity() {
                         if (user?.email == email && user.password == password) {
                             userFound = true
                             userType = user.userType
+                            UserManager.user = user // Almacenar los datos del usuario en UserManager
                             break
                         }
                     }

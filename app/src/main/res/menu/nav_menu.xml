@@ -11,7 +11,7 @@
     <item
         android:id="@+id/nav_profile"
         android:icon="@drawable/baseline_person_pin_24"
-        android:title="Perfile"/>
+        android:title="Perfil"/>
 
     <item
         android:id="@+id/nav_logout"
