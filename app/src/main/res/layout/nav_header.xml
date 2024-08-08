@@ -9,14 +9,15 @@
     android:background="@color/white" >
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/header_imageUser"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:src="@drawable/logo_utvt" />
 
     <TextView
+        android:id="@+id/header_nameUser"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/user_name"
         android:paddingTop="8dp"
         android:textSize="20dp"
         android:text="Nombre del usuario"
@@ -24,6 +25,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/header_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16dp"

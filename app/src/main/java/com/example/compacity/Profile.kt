@@ -3,6 +3,8 @@ package com.example.compacity
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
 
 class Profile : AppCompatActivity() {
@@ -22,6 +25,12 @@ class Profile : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_profile)
+
+        val btnGetOut = findViewById<Button>(R.id.btn_GetOut)
+
+        btnGetOut.setOnClickListener {
+            finish()
+        }
 
         // --------------------------------------------------------------------------------------------------
         val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
@@ -43,7 +52,26 @@ class Profile : AppCompatActivity() {
         }
         // --------------------------------------------------------------------------------------------------
 
+
+        // --------------------------------------------------------------------------------------------------
+        // Actualizar los datos del usuario en el header del menú lateral
+        val headerView = navView.getHeaderView(0)
+        val userNameTextView: TextView = headerView.findViewById(R.id.header_nameUser)
+        val userEmailTextView: TextView = headerView.findViewById(R.id.header_email)
+        val userProfileImageView: de.hdodenhof.circleimageview.CircleImageView = headerView.findViewById(R.id.header_imageUser)
+
         val user = UserManager.user
+
+        userNameTextView.text = user?.name
+        userEmailTextView.text = user?.email
+        if (user?.imageUrl != null) {
+            Glide.with(this)
+                .load(user.imageUrl)
+                .into(userProfileImageView)
+        } else {
+            userProfileImageView.setImageResource(R.drawable.ic_launcher_foreground)
+        }
+        // --------------------------------------------------------------------------------------------------
 
         val textView1 = findViewById<TextView>(R.id.txt_nameProfile)
         textView1.text = "Nombre: ${user?.name}"
@@ -56,6 +84,15 @@ class Profile : AppCompatActivity() {
 
         val textView4 = findViewById<TextView>(R.id.txt_birthdayProfile)
         textView4.text = "Cumpleaños: ${user?.birthday}"
+
+        val imageView = findViewById<ImageView>(R.id.img_profile)
+        if (user?.imageUrl != null) {
+            Glide.with(this)
+                .load(user.imageUrl)
+                .into(imageView)
+        } else {
+            imageView.setImageResource(R.drawable.ic_launcher_foreground)
+        }
 
     }
 }

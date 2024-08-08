@@ -17,6 +17,7 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.DataSnapshot
@@ -53,6 +54,30 @@ class Home : AppCompatActivity() {
             }
             true
         }
+        // --------------------------------------------------------------------------------------------------
+
+
+        // --------------------------------------------------------------------------------------------------
+        // Actualizar los datos del usuario en el header del menú lateral
+        val headerView = navView.getHeaderView(0)
+        val userNameTextView: TextView = headerView.findViewById(R.id.header_nameUser)
+        val userEmailTextView: TextView = headerView.findViewById(R.id.header_email)
+        val userProfileImageView: de.hdodenhof.circleimageview.CircleImageView = headerView.findViewById(R.id.header_imageUser)
+
+        val user = UserManager.user
+
+        userNameTextView.text = user?.name
+        userEmailTextView.text = user?.email
+        if (user?.imageUrl != null) {
+            Glide.with(this)
+                .load(user.imageUrl)
+                .into(userProfileImageView)
+        } else {
+            userProfileImageView.setImageResource(R.drawable.ic_launcher_foreground)
+        }
+        // --------------------------------------------------------------------------------------------------
+
+
         // --------------------------------------------------------------------------------------------------
 
         // Configurar RecyclerView

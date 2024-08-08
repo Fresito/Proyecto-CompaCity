@@ -1,5 +1,5 @@
 package com.example.compacity
 
 object UserManager {
-    var user: User? = null
+    var user: Users? = null
 }

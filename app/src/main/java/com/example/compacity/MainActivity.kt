@@ -45,11 +45,11 @@ class MainActivity : AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     var userFound = false
                     var userType: Int? = null
-                    var userData: User? = null
+                    var userData: Users? = null
 
                     // Coincide el correo electrónico y la contraseña
                     for (childSnapshot in snapshot.children) {
-                        val user = childSnapshot.getValue(User::class.java)
+                        val user = childSnapshot.getValue(Users::class.java)
                         if (user?.email == email && user.password == password) {
                             userFound = true
                             userType = user.userType
@@ -63,8 +63,14 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this@MainActivity, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
 
                         when (userType) {
-                            1 -> startActivity(Intent(this@MainActivity, Home::class.java))
-                            2 -> startActivity(Intent(this@MainActivity, Home::class.java))
+                            1 -> {
+                                startActivity(Intent(this@MainActivity, Home::class.java))
+                                finish()
+                            }
+                            2 -> {
+                                startActivity(Intent(this@MainActivity, Home::class.java))
+                                finish()
+                            }
                             else -> Toast.makeText(this@MainActivity, "Tipo de usuario desconocido", Toast.LENGTH_SHORT).show()
                         }
 
@@ -93,4 +99,3 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-data class User(val address: String? = null, val birthday: String? = null, val email: String? = null, val name: String? = null, val password: String? = null, val userType: Int? = null)

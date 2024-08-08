@@ -12,7 +12,7 @@
         android:layout_height="match_parent" >
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_GetOut"
             android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:background="@drawable/baseline_keyboard_arrow_left_24"
@@ -23,8 +23,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.073" />
 
-        <ImageView
-            android:id="@+id/imageView2"
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/img_profile"
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:layout_constraintBottom_toBottomOf="parent"
