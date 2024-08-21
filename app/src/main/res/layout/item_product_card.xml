@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:elevation="6dp"
-        app:cardCornerRadius="12dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@android:color/white"
         android:id="@+id/card_Products"
         tools:ignore="MissingConstraints">
@@ -22,48 +22,56 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Product Image -->
             <ImageView
                 android:id="@+id/detail_image"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:scaleType="centerCrop"
                 android:contentDescription=""
-                android:src="@drawable/logo_utvt" />
+                android:src="@drawable/logo_utvt"
+                android:background="@drawable/border_rounded" />
 
+            <!-- Product Title -->
             <TextView
                 android:id="@+id/detail_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Title"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
-                android:textColor="@android:color/black" />
+                android:textColor="@color/colorPrimary" />
 
+            <!-- Product Description -->
             <TextView
                 android:id="@+id/detail_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Description"
                 android:layout_marginTop="4dp"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/black" />
 
+            <!-- Product Characteristics -->
             <TextView
                 android:id="@+id/detail_characteristics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Characteristics"
                 android:layout_marginTop="4dp"
-                android:textColor="@android:color/darker_gray" />
+                android:textColor="@android:color/black" />
 
+            <!-- Product Price -->
             <TextView
                 android:id="@+id/detail_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Price: $0.00"
-                android:textColor="@android:color/holo_green_dark"
+                android:textSize="18sp"
+                android:textColor="@color/colorAccent"
                 android:layout_marginTop="4dp" />
 
+            <!-- Quantity Controls -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,6 +84,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="-"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white"
                     android:layout_marginEnd="8dp" />
 
                 <TextView
@@ -83,27 +93,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
-                    android:textSize="16sp"
+                    android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginEnd="8dp" />
+                    android:layout_marginEnd="8dp"
+                    android:textColor="@android:color/black" />
 
                 <Button
                     android:id="@+id/button_add"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="+" />
+                    android:text="+"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@android:color/white" />
 
             </LinearLayout>
 
+            <!-- Add to Cart Button -->
             <Button
                 android:id="@+id/button_add_to_cart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Add to Cart"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@color/black"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorAccent"
                 android:textColor="@android:color/white"
-                android:elevation="2dp" />
+                android:elevation="4dp"
+                android:textSize="16sp" />
 
         </LinearLayout>
 
