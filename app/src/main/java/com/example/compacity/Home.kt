@@ -49,8 +49,10 @@ class Home : AppCompatActivity() {
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.nav_home -> Toast.makeText(applicationContext, "Inicio", Toast.LENGTH_SHORT).show()
-                R.id.nav_profile -> startActivity(Intent(this, Profile::class.java))
-                R.id.nav_logout -> Toast.makeText(applicationContext, "Cerrar sesión", Toast.LENGTH_SHORT).show()
+                R.id.nav_profile -> {
+                    startActivity(Intent(this, Profile::class.java))
+                    finish()
+                }
             }
             true
         }
@@ -133,11 +135,17 @@ class ProductAdapter(private val productList: List<Computers>) :
         private val computerTitle: TextView = itemView.findViewById(R.id.detail_title)
         private val computerDescription: TextView = itemView.findViewById(R.id.detail_characteristics)
         private val computerPrice: TextView = itemView.findViewById(R.id.detail_price)
+        private val computerImage: ImageView = itemView.findViewById(R.id.detail_image)
 
         fun bind(computer: Computers) {
             computerTitle.text = computer.brand
             computerDescription.text = computer.description
             computerPrice.text = "$${computer.serialNumber}"
+            Glide.with(itemView.context)
+                .load(computer.imageUrl)
+                .placeholder(R.drawable.ic_launcher_foreground) // Imagen de placeholder mientras se carga la imagen
+                .error(R.drawable.logo_utvt) // Imagen en caso de error al cargar
+                .into(computerImage)
         }
     }
 }

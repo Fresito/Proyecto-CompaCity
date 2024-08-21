@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -26,9 +27,10 @@ class Profile : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_profile)
 
-        val btnGetOut = findViewById<Button>(R.id.btn_GetOut)
+        val btnGetOut = findViewById<ImageButton>(R.id.btn_GetOut)
 
         btnGetOut.setOnClickListener {
+            startActivity(Intent(this, Home::class.java))
             finish()
         }
 
@@ -44,9 +46,11 @@ class Profile : AppCompatActivity() {
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId) {
-                R.id.nav_home -> startActivity(Intent(this, Home::class.java))
+                R.id.nav_home -> {
+                    startActivity(Intent(this, Home::class.java))
+                    finish()
+                }
                 R.id.nav_profile -> Toast.makeText(applicationContext, "Perfil", Toast.LENGTH_SHORT).show()
-                R.id.nav_logout -> Toast.makeText(applicationContext, "Cerrar sesión", Toast.LENGTH_SHORT).show()
             }
             true
         }

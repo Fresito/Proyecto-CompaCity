@@ -5,8 +5,9 @@ data class Computers(
     val description: String,
     val model: String,
     val releaseDate: String,
-    val serialNumber: String
+    val serialNumber: String,
+    val imageUrl: String? = null
 ) {
     // Constructor sin argumentos
-    constructor() : this("", "", "", "", "")
+    constructor() : this("", "", "", "", "","")
 }

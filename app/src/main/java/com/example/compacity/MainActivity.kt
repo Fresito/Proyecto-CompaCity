@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         val btnRegister = findViewById<Button>(R.id.btn_register)
         // -------------------------------------------------------------------------------------------------
 
-        FirebaseApp.initializeApp(this) // Inicializacion de Firebase
+
         val database = FirebaseDatabase.getInstance()
         val reference = database.getReference("users") // Nombre de la tabla
 
@@ -45,7 +45,6 @@ class MainActivity : AppCompatActivity() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     var userFound = false
                     var userType: Int? = null
-                    var userData: Users? = null
 
                     // Coincide el correo electrónico y la contraseña
                     for (childSnapshot in snapshot.children) {
@@ -64,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
                         when (userType) {
                             1 -> {
-                                startActivity(Intent(this@MainActivity, Home::class.java))
+                                startActivity(Intent(this@MainActivity, ProfileAdmin::class.java))
                                 finish()
                             }
                             2 -> {
