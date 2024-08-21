@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".EditUser">
+
+    <!-- Botón de regreso -->
+    <ImageButton
+        android:id="@+id/btn_backPage"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/baseline_arrow_circle_left_24"
+        android:contentDescription="Botón para regresar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="start|top"
+        android:layout_marginTop="28dp" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageUser_Update"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:paddingBottom="20dp"
+        android:src="@drawable/logo_utvt"
+        android:layout_marginTop="16dp"/>
+    <!-- Nombre Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="4dp" />
+
+    <EditText
+        android:id="@+id/name_Update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Cumpleaños Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cumpleaños:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="4dp" />
+
+    <EditText
+        android:id="@+id/birthday_Update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingBottom="8dp"
+        android:inputType="date" />
+
+    <!-- Dirección Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dirección:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="4dp" />
+
+    <EditText
+        android:id="@+id/address_Update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Correo Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Correo:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="4dp" />
+
+    <EditText
+        android:id="@+id/email_Update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingBottom="8dp"
+        android:inputType="textEmailAddress" />
+
+    <!-- Password Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password:"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:paddingBottom="4dp" />
+
+    <EditText
+        android:id="@+id/password_Update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/edittext_background"
+        android:padding="12dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:minHeight="48dp"
+        android:paddingBottom="8dp"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/btn_UpdateUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+</LinearLayout>
