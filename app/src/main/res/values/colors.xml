@@ -1,6 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Basic Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="gray">#CCCCCC</color>
+    <color name="dark_gray">#A9A9A9</color>
+    <color name="dark_grayy">#666666</color> <!-- Consider renaming to avoid confusion -->
     <color name="underline">#808888</color>
-</resources>
+
+    <!-- Text Colors -->
+    <color name="text_color">#333333</color> <!-- Dark gray for text -->
+    <color name="textColor">#333333</color> <!-- Consider consolidating -->
+
+    <!-- Button Colors -->
+    <color name="button_color">#007BFF</color> <!-- Bright blue for buttons -->
+    <color name="buttonColor">#FF4081</color> <!-- Consider consolidating -->
+    <color name="buttonBackground">#FFFFFF</color>
+    <color name="buttonShadowColor">#BDBDBD</color>
+
+    <!-- Background Colors -->
+    <color name="background_color">#FFFFF0</color> <!-- Warm white -->
+    <color name="backgroundColor">#F5F5F5</color> <!-- Consider consolidating -->
+    <color name="textViewBackground">#E0F7FA</color>
+
+    <!-- EditText Colors -->
+    <color name="editTextBackground">#E0E0E0</color>
+    <color name="editTextColor">#000000</color>
+
+    <!-- Accent and Primary Colors -->
+    <color name="colorPrimary">#3F51B5</color> <!-- Primary color -->
+    <color name="colorAccent">#FF5722</color> <!-- Accent color -->
+    <color name="accentColor">#FF5722</color> <!-- Consider consolidating -->
+    <color name="colorWhite">#FFFFFF</color> <!-- White color -->
+
+    <!-- Hint Text Color -->
+    <color name="colorHint">#B0B0B0</color> <!-- Hint text color -->
+
+    <!-- Image and Menu Colors -->
+    <color name="imageBorderColor">#4CAF50</color> <!-- Border and shadow for CircleImageView -->
+    <color name="drawerBackground">#FFFFFF</color> <!-- Background color for the side menu -->
+
+    <!-- Additional Colors -->
+    <color name="green">#4CAF50</color> <!-- Green -->
+    <color name="red">#F44336</color> <!-- Red -->
+    <color name="blue">#2196F3</color> <!-- Blue -->
+    <color name="orange">#FF6A00</color> <!-- Orange -->
+    <color name="pink">#FF0084</color> <!-- Pink -->
+
+    <color name="menu_item_background">#E0E0E0</color>
+    <color name="design_default_color_error">#B00020</color>
+
+    <!-- colors.xml -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="text_primary">#000000</color>
+    <color name="button_normal">#FF6200EE</color>
+    <color name="button_pressed">#FF3700B3</color>
+    <color name="edit_button_normal">#6200EE</color>
+    <color name="edit_button_pressed">#3700B3</color>
+    <color name="delete_button_normal">#B00020</color>
+    <color name="delete_button_pressed">#790000</color>
+    <!-- Primary color -->
+    <color name="primaryColor">#E0E0E0</color> <!-- Ajusta según tu diseño -->
+    <!-- Darker gray for text hints -->
+    <color name="darkerGray">#757575</color>
+
+    <color name="hint_color">#B0B0B0</color>
+    <color name="light_background">#F5F5F5</color>
+    <!-- Primary Colors -->
+    <color name="colorPrimaryDark">#3700B3</color> <!-- Azul más oscuro -->
+
+    <!-- Text Colors -->
+    <color name="colorTextPrimary">#000000</color> <!-- Negro -->
+    <color name="colorTextSecondary">#666666</color> <!-- Gris oscuro -->
+
+    <!-- Background Colors -->
+    <color name="colorBackground">#FFFFFF</color> <!-- Blanco -->
+    <color name="colorBackgroundDark">#F0F0F0</color> <!-- Gris claro -->
+
+
+    <color name="cardBackground">#FFFFFF</color>
+    <color name="primaryTextColor">#333333</color>
+    <color name="secondaryTextColor">#40E0D0</color>
+    <color name="buttonEditBackground">#00796B</color>
+    <color name="buttonDeleteBackground">#C62828</color>
+    <color name="buttonSaveBackground">#00796B</color>
+    <color name="editTextTextColor">#000000</color>
+    <color name="shadowColor">#000000</color>
+    <color name="buttonExitBackground">#385895</color>
+
+
+    <color name="colorError">#D32F2F</color> <!-- Rojo -->
+    <color name="colorCardBackground">#F5F5F5</color> <!-- Gris claro -->
+    <color name="colorShadow">#60000000</color> <!-- Sombra negra semi-translúcida --></resources>

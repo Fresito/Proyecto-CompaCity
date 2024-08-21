@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -15,6 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CompaCity"
         tools:targetApi="31">
+        <activity
+            android:name=".ProfileAdmin"
+            android:exported="false" />
+        <activity
+            android:name=".ListUsers"
+            android:exported="false" />
+        <activity
+            android:name=".EditUser"
+            android:exported="false" />
+        <activity
+            android:name=".NewProduct"
+            android:exported="false" />
         <activity
             android:name=".Profile"
             android:exported="false" />
